@@ -2,8 +2,8 @@
 
 * Copyright (C) 2019  Qianqian Fang <q.fang at neu.edu>
 * License: GNU General Public License version 3 (GPL v3) or Apache License 2.0, see License*.txt
-* Version: 0.4
-* URL: http://github.com/fangq/jsnirf/lib/matlab
+* Version: 0.4 (code name: Amygdala - alpha)
+* URL: https://github.com/fangq/jsnirf/tree/master/lib/matlab
 
 ## Overview
 
@@ -19,7 +19,7 @@ storage, grouping, compression, integration with heterogeneous scientific data
 enabled by JData data serialization framework.
 
 This toolbox also provides a fast/complete reader/writer for the HDF5-based SNIRF
-files (along with any HDF5 data) via the embedded EazyH5 toolbox 
+files (along with any HDF5 data) via the EazyH5 toolbox 
 (http://github.com/fangq/eazyh5). The toolbox can read/write SNIRF v1.0 data
 files specified by the SNIRF specification http://github.com/fNIRS/snirf .
 
@@ -38,7 +38,7 @@ The JSNIRF data structure is highly compatible with the SNIRF data structure.
 This toolbox provides utilities convert from one form to the other losslessly.
 
 There are only two minor differences:
-* A JSNIRF data container renames the SNIRF `/nirs` root object as `SNITFData`.
+* A JSNIRF data container renames the SNIRF `/nirs` root object as `SNIRFData`.
   If multiple measurement datasets are provided in the SNIRF data in the forms of
   `/nirs1`, `/nirs2` ..., or `/nirs/data1`. `/nirs/data2` ..., JSNIRF merges these
   data objects into struct/cell arrays, and removes the group indices from the 
@@ -77,7 +77,7 @@ is converted to the below JSON/JSNIRF data structure
 {
   "SNIRFData": [
       {
-          "formatVersion": '1',
+          "formatVersion": '1.0',
           "metaDataTags":{
 	      "SubjectID": ...
 	  },
@@ -92,7 +92,7 @@ is converted to the below JSON/JSNIRF data structure
 	  "probe": ...
       },
       {
-          "formatVersion": '1',
+          "formatVersion": '1.0',
           "metaDataTags":{
 	      "SubjectID": ...
 	  },
@@ -155,3 +155,11 @@ Example:
   savejsnirf(data,'test.jnirs');
 ```
 
+## Contribute to JSNIRF
+
+Please submit your bug reports, feature requests and questions to the Github Issues page at
+
+https://github.com/fangq/jsnirf/issues
+
+Please feel free to fork our software, making changes, and submit your revision back
+to us via "Pull Requests". JSNIRF toolbox is open-source and we welcome your contributions!
