@@ -1,3 +1,9 @@
 [submodule "lib/easyh5"]
 	path = lib/easyh5
 	url = https://github.com/fangq/easyh5.git
+[submodule "lib/matlab"]
+	path = lib/matlab
+	url = https://github.com/fangq/jsnirfy
+[submodule "samples"]
+	path = samples
+	url = https://github.com/fNIRS/snirf-samples.git
